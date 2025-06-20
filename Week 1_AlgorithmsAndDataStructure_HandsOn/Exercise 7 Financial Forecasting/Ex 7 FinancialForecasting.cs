@@ -2,7 +2,7 @@ using System;
 
 class FinancialForecasting
 {
-    // Recursive method to calculate future value
+    
     public static double CalculateFutureValue(double presentValue, double growthRate, int years)
     {
         if (years == 0)
@@ -11,7 +11,7 @@ class FinancialForecasting
             return (1 + growthRate) * CalculateFutureValue(presentValue, growthRate, years - 1);
     }
 
-    // Optimized version using memoization (optional)
+  
     public static double CalculateFutureValueOptimized(double presentValue, double growthRate, int years)
     {
         double[] memo = new double[years + 1];
