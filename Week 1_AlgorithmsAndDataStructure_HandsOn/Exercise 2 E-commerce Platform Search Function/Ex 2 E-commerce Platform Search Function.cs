@@ -21,7 +21,7 @@ class Product
 
 class SearchExample
 {
-    // Linear Search
+   
     public static int LinearSearch(Product[] products, string name)
     {
         for (int i = 0; i < products.Length; i++)
@@ -32,7 +32,7 @@ class SearchExample
         return -1;
     }
 
-    // Binary Search (assumes array is sorted by ProductName)
+   
     public static int BinarySearch(Product[] products, string name)
     {
         int left = 0, right = products.Length - 1;
@@ -62,7 +62,7 @@ class SearchExample
         if (index != -1) products[index].Display();
         else Console.WriteLine("Product not found.");
 
-        // Sort array by name for binary search
+
         Array.Sort(products, (p1, p2) => p1.ProductName.CompareTo(p2.ProductName));
 
         Console.WriteLine("\n🔍 Binary Search for 'Monitor':");
