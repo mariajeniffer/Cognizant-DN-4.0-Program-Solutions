@@ -21,7 +21,7 @@ class Book
 
 class LibrarySearch
 {
-    // Linear Search by title
+    
     public static int LinearSearch(Book[] books, string searchTitle)
     {
         for (int i = 0; i < books.Length; i++)
@@ -32,7 +32,7 @@ class LibrarySearch
         return -1;
     }
 
-    // Binary Search by title (Assumes sorted array)
+ 
     public static int BinarySearch(Book[] books, string searchTitle)
     {
         int left = 0, right = books.Length - 1;
@@ -62,7 +62,6 @@ class LibrarySearch
         if (index != -1) books[index].Display();
         else Console.WriteLine("Book not found.");
 
-        // Sort array by Title for binary search
         Array.Sort(books, (b1, b2) => b1.Title.CompareTo(b2.Title));
 
         Console.WriteLine("\n📗 Binary Search for 'The Hobbit':");
