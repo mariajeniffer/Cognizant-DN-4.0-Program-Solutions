@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace InventoryManagementSystem
 {
-    // Product class
     public class Product
     {
         public string ProductId { get; set; }
@@ -25,7 +24,6 @@ namespace InventoryManagementSystem
         }
     }
 
-    // Inventory class
     public class Inventory
     {
         private Dictionary<string, Product> products = new Dictionary<string, Product>();
@@ -84,28 +82,23 @@ namespace InventoryManagementSystem
         }
     }
 
-    // Main Program
     class Program
     {
         static void Main(string[] args)
         {
             Inventory inventory = new Inventory();
 
-            // Adding products
             inventory.AddProduct(new Product("P001", "Keyboard", 50, 699.99));
             inventory.AddProduct(new Product("P002", "Mouse", 100, 299.49));
             inventory.AddProduct(new Product("P003", "Monitor", 30, 5499.00));
 
-            // Display all products
             Console.WriteLine("\nAll Products:");
             inventory.DisplayProducts();
 
-            // Update a product
             inventory.UpdateProduct("P002", 80, 279.49);
             Console.WriteLine("\nAfter Updating Product P002:");
             inventory.DisplayProducts();
 
-            // Delete a product
             inventory.DeleteProduct("P001");
             Console.WriteLine("\nAfter Deleting Product P001:");
             inventory.DisplayProducts();
